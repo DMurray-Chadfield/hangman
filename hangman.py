@@ -27,4 +27,4 @@ while guess != word:
         for i in indices:
             list_guess = list(guess)
             list_guess[i] = letter 
-            guess = list_guess.join()
+            guess = ''.join(list_guess)
