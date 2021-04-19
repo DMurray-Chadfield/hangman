@@ -19,13 +19,16 @@ def find_all(string, letter):
 
 
 used_letters = []
+level = 0
 while guess != word:
     print(guess, used_letters)
+    print(art_dict[level])
     letter = input('Player two, guess a letter: ')
     used_letters.append(letter)
     indices = find_all(word, letter)
     if len(indices) == 0:
         print('Incorrect, try again!')
+        level += 1
     else:
         print('Correct')
         for i in indices:
