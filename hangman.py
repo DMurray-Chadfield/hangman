@@ -1,3 +1,7 @@
+import ascii_art as art
+
+art_dict = {0:art.zero, 1:art.one, 2:art.two, 3:art.three, 4:art.four, 5:art.five}
+
 word = input('Player one, choose a word: ')
 
 word = word.lower()
