@@ -28,3 +28,5 @@ while guess != word:
             list_guess = list(guess)
             list_guess[i] = letter 
             guess = ''.join(list_guess)
+
+print(f'Well done, the word was {word}.')
