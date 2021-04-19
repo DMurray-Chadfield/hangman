@@ -14,7 +14,15 @@ def find_all(string, letter):
     return indices
 
 
-
+used_letters = []
 while guess != word:
-    print(guess)
+    print(guess, used_letters)
     letter = input('Player two, guess a letter: ')
+    used_letters.append(letter)
+    indices = find_all(word, letter)
+    if len(indices) == 0:
+        print('Incorrect, try again!')
+    else:
+        print('Correct')
+        for i in indices:
+            guess[i] = letter
