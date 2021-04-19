@@ -20,7 +20,7 @@ def find_all(string, letter):
 
 used_letters = []
 level = 0
-while guess != word:
+while guess != word and level < 5:
     print(guess, used_letters)
     print(art_dict[level])
     letter = input('Player two, guess a letter: ')
@@ -36,4 +36,8 @@ while guess != word:
             list_guess[i] = letter 
             guess = ''.join(list_guess)
 
-print(f'Well done, the word was {word}.')
+if guess == word:
+    print(f'Well done, the word was {word}.')
+elif level == 5:
+    print(art_dict[5])
+    print(f'Better luck next time. The word was {word}.')
