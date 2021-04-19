@@ -25,4 +25,6 @@ while guess != word:
     else:
         print('Correct')
         for i in indices:
-            guess[i] = letter
+            list_guess = list(guess)
+            list_guess[i] = letter 
+            guess = list_guess.join()
