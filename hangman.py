@@ -24,6 +24,12 @@ while guess != word and level < 5:
     print(guess, used_letters)
     print(art_dict[level])
     letter = input('Player two, guess a letter: ')
+    if len(letter) > 1:
+        print('Only single letters please.')
+        continue
+    elif letter in used_letters:
+        print('You have already used that letter.')
+        continue
     used_letters.append(letter)
     indices = find_all(word, letter)
     if len(indices) == 0:
